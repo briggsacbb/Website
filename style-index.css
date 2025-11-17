@@ -1,0 +1,168 @@
+/* ---------- GLOBAL STYLES ---------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
+
+/* ---------- NAVIGATION (SCOPED) ---------- */
+/* Home page nav */
+.home-page nav {
+  position: relative;
+  background-image: url("images/86-night.jpg");
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* Photo page nav (same logo, same layout, can use different style if needed) */
+.photo-page nav {
+  position: relative;
+  background-image: url("light-bridge.jpg"); /* match home background */
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* Nav shared elements (logo and links) */
+.home-page nav .logo,
+.photo-page nav .logo {
+  font-weight: bold;
+}
+
+.home-page nav .logo {
+  font-size: 60px;
+}
+
+.photo-page nav .logo {
+  font-size: 60px;
+}
+
+.home-page nav ul,
+.photo-page nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page nav a,
+.photo-page nav a {
+  text-decoration: none;
+}
+
+.home-page nav a {
+  color: white;
+  font-size: 30px;
+}
+
+.photo-page nav a {
+  color: white;
+  font-size: 30px;
+}
+
+.home-page nav a.active,
+.home-page nav a:hover,
+.photo-page nav a.active,
+.photo-page nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- HOME PAGE HERO ---------- */
+.home-page .hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('https://via.placeholder.com/1500x600') center/cover;
+  color: black;
+  font-size: 30px;
+}
+
+.home-page .hero p {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+.home-page .hero h2 {
+  max-width: 1200px;
+  margin: 50px auto 20px auto;
+}
+
+/* ---------- PHOTO PAGE HERO ---------- */
+.photo-page .hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url("light-bridge.jpg"); /* same as home */
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  color: white; /* make text visible */
+}
+
+.photo-page .hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.photo-page .hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ---------- PAGE TITLE ---------- */
+.page-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+/* ---------- PHOTO PAGE / GALLERY ---------- */
+.photo-page .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  gap: 20px;
+  padding: 30px;
+}
+
+.photo-page .photo {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* uniform aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-page .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container, crops excess */
+  display: block;
+  transition: none; /* remove zoom on hover */
+  cursor: pointer;
+}
+
+/* ---------- RESPONSIVE GALLERY ---------- */
+@media screen and (max-width: 900px) {
+  .photo-page .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .photo-page .gallery {
+    grid-template-columns: 1fr;
+  }
+}

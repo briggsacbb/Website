@@ -19,9 +19,11 @@
     </ul>
   </nav>
 
+	
+	
   <!-- HERO/BACKGROUND IMAGE AT TOP -->
   <header class="hero">
-    <h2>Photo Gallery</h2>
+    <h2><span id="typewriter"></span></h2>
     <p>Welcome to my photography gallery! Click on any photo to view the full-size image.</p>
   </header>
 
@@ -74,5 +76,22 @@
       </a>
     </div>
 	</div>
+	
+	<script>
+    const text = "Photo Gallery";
+    let i = 0;
+    const speed = 70; // typing speed (ms)
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+	
 </body>
 </html>

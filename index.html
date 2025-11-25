@@ -21,9 +21,33 @@
 
   <!-- HERO SECTION -->
   <header class="hero">
-    <h2>Photography • Videography • Live Broadcast</h2>
+    <h2><span id="typewriter"></span></h2>
     <p>Hi, my name is Adam Briggs, and I am attending the University of Cincinnati studying Media Production. I am currently working in live broadcast for ESPN+ through UC Athletics. My primary focus is live broadcast, whether that be sports, concerts, or performances. I am always looking to meet new people and have fun doing what I love! </p>
   </header>
+
+  <p class="contact-line">
+    Contact me at 
+    <a class="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=adambriggspv@gmail.com" target="_blank">
+      AdamBriggsPV@email.com
+    </a>
+  </p>
+
+  <!-- TYPEWRITER SCRIPT -->
+  <script>
+    const text = "Photography • Videography • Live Broadcast";
+    let i = 0;
+    const speed = 70; // typing speed (ms)
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
 
 </body>
 </html>

@@ -82,7 +82,7 @@ body {
 /* ---------- HOME PAGE HERO ---------- */
 .home-page .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 0px 20px;
   background: url('https://via.placeholder.com/1500x600') center/cover;
   color: black;
   font-size: 30px;
@@ -165,4 +165,21 @@ body {
   .photo-page .gallery {
     grid-template-columns: 1fr;
   }
+}
+.email-link {
+  display: block;            /* lets it behave like a full-width item */
+  text-align: center;        /* centers the text */
+  font-size: 20px;
+  font-weight: bold;
+  color: #0077ff;
+  text-decoration: none;
+  margin: 40px auto;         /* adds space above/below + centers block */
+  width: max-content;        /* keeps the link from stretching full width */
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.contact-line {
+  text-align: center;
+  font-size: 30px;   /* optional size */
+  margin-top: 440px;  /* add spacing from hero */
 }

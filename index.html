@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Adam Briggs</title>
   <link rel="stylesheet" href="style-index.css">
+  <style>
+    /* --- Widget Styles --- */
+    .widget {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 30px 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 50px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .widget h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .widget p {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .widget button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #0077ff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .widget button:hover {
+      background-color: #0056aa;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="home-page">
 
@@ -22,9 +61,17 @@
   <!-- HERO SECTION -->
   <header class="hero">
     <h2><span id="typewriter"></span></h2>
-    <p>Hi, my name is Adam Briggs, and I am attending the University of Cincinnati studying Media Production. I am currently working in live broadcast for ESPN+ through UC Athletics. My primary focus is live broadcast, whether that be sports, concerts, or performances. I am always looking to meet new people and have fun doing what I love! </p>
+    <p>Hi, my name is Adam Briggs, and I am attending the University of Cincinnati studying Media Production. I am currently working in live broadcast for ESPN+ through UC Athletics. My primary focus is live broadcast, whether that be sports, concerts, or performances. I am always looking to meet new people and have fun doing what I love!</p>
   </header>
 
+  <!-- INTERACTIVE WIDGET -->
+  <section class="widget">
+    <h3>Feeling Inspired?</h3>
+    <p id="quote">Click the button to get a random quote!</p>
+    <button id="quoteButton">Generate Quote</button>
+  </section>
+
+  <!-- CONTACT -->
   <p class="contact-line">
     Contact me at 
     <a class="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=adambriggspv@gmail.com" target="_blank">
@@ -47,6 +94,24 @@
     }
 
     window.onload = typeWriter;
+  </script>
+
+  <!-- WIDGET SCRIPT -->
+  <script>
+    const quotes = [
+      "Don't cry because it's over, smile because it happened. – Dr. Seuss",
+      "Fall seven times, stand up eight. – Japanese Proverb",
+      "The people who are crazy enough to think they can change the world are the ones who do. – Steve Jobs",
+      "You must be the change you wish to see in the world. – Mahatma Gandhi"
+    ];
+
+    const button = document.getElementById("quoteButton");
+    const quoteText = document.getElementById("quote");
+
+    button.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteText.textContent = quotes[randomIndex];
+    });
   </script>
 
 </body>

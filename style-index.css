@@ -31,7 +31,6 @@ body {
   width: 250px;     /* same as live page logo */
   height: auto;
   display: block;   /* removes inline spacing */
-  vertical-align: top; /* aligns image to top of nav */
 }
 
 .home-page nav ul {
@@ -61,7 +60,9 @@ body {
 
 .home-page .hero h2 {
   max-width: 1200px;
-  margin: 50px auto 20px auto;
+  margin: 0 auto 20px auto;
+  font-size: 45px;      /* MATCH Live Experience page */
+  font-weight: bold;
 }
 
 .home-page .hero p {
@@ -97,5 +98,5 @@ body {
 /* ---------- TYPEWRITER ---------- */
 #typewriter {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 45px;      /* MATCH Live Experience page */
 }

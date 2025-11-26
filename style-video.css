@@ -35,7 +35,6 @@ nav .logo img {
   width: 250px;
   height: auto;
   display: block;       /* remove inline spacing */
-  vertical-align: top;  /* aligns image to top of nav */
 }
 
 nav ul {

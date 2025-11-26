@@ -32,7 +32,6 @@ nav .logo img {
   width: 250px;
   height: auto;
   display: block;       /* removes inline spacing */
-  vertical-align: top;  /* aligns image to top of nav */
 }
 
 nav ul {
@@ -64,7 +63,7 @@ nav a:hover {
 
 .hero h2 {
   max-width: 1200px;
-  margin: 50px auto 20px auto;
+  margin: 0 auto 20px auto;
 }
 
 .hero p {

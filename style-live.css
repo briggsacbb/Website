@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #fafafa;
+  color: black;
 }
 
 /* ---------- NAVIGATION ---------- */
@@ -46,21 +47,22 @@ nav a:hover {
 /* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding: 10px 20px;
-  color: black;
-  font-size: 30px;
+  padding: 60px 20px;  /* increased padding to match Video page */
+}
+
+.hero h2 {
+  font-size: 45px;       /* match Video page heading size */
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+  max-width: 1200px;
 }
 
 .hero p {
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.6;
-  font-size: 1rem;
-}
-
-.hero h2 {
-  max-width: 1200px;
-  margin: 50px auto 20px auto;
+  font-size: 1.5rem;     /* consistent with Video page */
+  color: black;
 }
 
 /* ---------- GALLERY ---------- */

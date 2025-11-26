@@ -1,66 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Video Gallery | Adam Briggs</title>
-  <link rel="stylesheet" href="style-video.css">
-</head>
-<body class="video-page">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Experience | Adam Briggs</title>
+  <link rel="stylesheet" href="style-live.css">
 
-  <!-- NAV -->
+</head>
+<body class="live-page">
+
+  <!-- NAV WITH BACKGROUND LIKE HOME PAGE -->
   <nav>
     <h1 class="logo">Adam Briggs</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="photo.html">Photo</a></li>
-      <li><a href="video.html" class="active">Video</a></li>
-      <li><a href="live.html">Live</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="live.html" class="active">Live</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO/BACKGROUND IMAGE AT TOP -->
   <header class="hero">
-    <h2><span id="typewriter"></span></h2>
-    <p>View some of my video projects!</p>
+    <h2 id="typewriter"></h2><span class="cursor"></span>
+    <p>Here is my current live broadcast experience. I am always looking forward to exciting new opportunities!</p>
   </header>
 
-  <!-- VIDEO GALLERY -->
-  <main>
-    <div class="gallery">
-
-      <!-- Video 1 -->
-      <div class="video-item">
-        <a href="https://tinyurl.com/tvdpsfmv" target="_blank">
-          <img src="videos/Simulate-Thumbnail.png" alt="Simulate poster">
-          <div class="play-icon">►</div>
-        </a>
-        <p class="video-title">Simulate</p>
+  <!-- GALLERY -->
+  <div class="gallery">
+    <div class="photo">
+      <img src="images/UC-Bearcats-Logo.jpg" alt="Photo 1">
+      <div class="photo-content">
+        <h3 class="organization">University of Cincinnati Athletics</h3>
+        <p class="dates">Feb 2025-Present</p>
+        <h4 class="skills-title">Skills</h4>
+        <ul class="skills-list">
+          <li>Camera Operation</li>
+          <li>Shading</li>
+          <li>Assistant Directing</li>
+          <li>Cable Management</li>
+          <li>Camera Utility</li>
+        </ul>
+        <h4 class="events-title">Events</h4>
+        <ul class="events-list">
+          <li>Basketball</li>
+          <li>Baseball</li>
+          <li>Volleyball</li>
+          <li>Lacrosse</li>
+          <li>Football</li>
+          <li>Soccer</li>
+        </ul>
       </div>
-
-      <!-- Video 2 -->
-      <div class="video-item">
-        <a href="https://tinyurl.com/2rbebsyp" target="_blank">
-          <img src="videos/The-Grind-Thumbnail.png" alt="The Grind poster">
-          <div class="play-icon">►</div>
-        </a>
-        <p class="video-title">The Grind</p>
-      </div>
-
-      <!-- Video 3 -->
-      <div class="video-item">
-        <a href="https://tinyurl.com/3b9sd9fe" target="_blank">
-          <img src="videos/The-Tower-Thumbnail.png" alt="The Tower poster">
-          <div class="play-icon">►</div>
-        </a>
-        <p class="video-title">The Tower</p>
-      </div>
-
     </div>
-  </main>
 
-	<script>
-    const text = "Video Gallery";
+    <div class="photo">
+      <img src="images/ICRCTV-Logo.jpg" alt="Photo 2">
+      <div class="photo-content">
+        <h3 class="organization">ICRC-TV</h3>
+        <p class="dates">May 2025 - Present</p>
+        <h4 class="skills-title">Skills</h4>
+        <ul class="skills-list">
+          <li>Camera Operation</li>
+          <li>Shading</li>
+          <li>Technical Directing</li>
+          <li>Directing</li>
+          <li>Setup/Teardown</li>
+        </ul>
+        <h4 class="events-title">Events</h4>
+        <ul class="events-list">
+          <li>Baseball</li>
+          <li>Concerts</li>
+          <li>Hall of Fame Induction</li>
+          <li>Seminar</li>
+          <li>Football</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="images/UC-CCM-Logo.jpg" alt="Photo 3">
+      <div class="photo-content">
+        <h3 class="organization">UC College-Conservatory of Music</h3>
+        <p class="dates">Sept 2025 - Nov 2025</p>
+        <h4 class="skills-title">Skills</h4>
+        <ul class="skills-list">
+          <li>Camera Operation</li>
+          <li>Technical Directing</li>
+          <li>Directing</li>
+          <li>Setup/Teardown</li>
+          <li>Planning</li>
+          <li>Communication</li>
+        </ul>
+        <h4 class="events-title">Events</h4>
+        <ul class="events-list">
+          <li>Music Concerts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPEWRITER JAVASCRIPT -->
+  <script>
+    const text = "Live Experience";
     const speed = 90; // typing speed
     let i = 0;
 
@@ -74,6 +115,6 @@
 
     window.onload = typeWriter;
   </script>
-	
+
 </body>
 </html>

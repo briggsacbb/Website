@@ -15,13 +15,24 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;          
+  padding: 40px 20px;          /* same as live page */
   color: white;                
+  line-height: 1;              /* remove extra vertical space */
 }
 
+/* Remove H1 default margin/padding so nav height matches live page */
 nav .logo {
+  margin: 0;
+  padding: 0;
   font-size: 60px;
   font-weight: bold;
+}
+
+nav .logo img {
+  width: 250px;
+  height: auto;
+  display: block;       /* removes inline spacing */
+  vertical-align: top;  /* aligns image to top of nav */
 }
 
 nav ul {
@@ -46,9 +57,14 @@ nav a:hover {
 /* ---------- HERO (optional) ---------- */
 .hero {
   text-align: center;
-  padding: 10px 20px;
+  padding: 60px 20px; /* increased to match other pages */
   color: black;
   font-size: 30px;
+}
+
+.hero h2 {
+  max-width: 1200px;
+  margin: 50px auto 20px auto;
 }
 
 .hero p {
@@ -56,11 +72,6 @@ nav a:hover {
   margin: 0 auto;
   line-height: 1.6;
   font-size: 1.5rem;
-}
-
-.hero h2 {
-  max-width: 1200px;
-  margin: 50px auto 20px auto;
 }
 
 /* ---------- PAGE TITLE ---------- */
@@ -80,7 +91,7 @@ nav a:hover {
 
 .photo {
   width: 100%;
-  aspect-ratio: 4 / 3; /* uniform aspect ratio; change to 1 / 1 for square images */
+  aspect-ratio: 4 / 3; /* uniform aspect ratio */
   overflow: hidden;
   border-radius: 8px;
 }
